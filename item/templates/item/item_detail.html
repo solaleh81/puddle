@@ -26,7 +26,10 @@
                 <div>
                     <a href="{% url 'item:detail' item.id %}">
                         <div>
+                            {% if item.image %}
                             <img src="{{ item.image.url }}" class="rounded-t-xl">
+                            {% else %}
+                            {% endif %}
                         </div>
     
                         <div class="p-6 bg-white rounded-b-xl">
